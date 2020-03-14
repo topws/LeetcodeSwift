@@ -35,6 +35,7 @@
 		8FB44DB02281285200EDF4FA /* ChooseBiggestArea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB44DAF2281285200EDF4FA /* ChooseBiggestArea.swift */; };
 		8FB44DB222812FCF00EDF4FA /* ReverseRomanNumerals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB44DB122812FCF00EDF4FA /* ReverseRomanNumerals.swift */; };
 		8FB44DB42283CD4F00EDF4FA /* LongestCommonPrefix.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8FB44DB32283CD4E00EDF4FA /* LongestCommonPrefix.swift */; };
+		FC0225E823D6A16100D7ED6B /* 1025.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC0225E723D6A16100D7ED6B /* 1025.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		8FB44DAF2281285200EDF4FA /* ChooseBiggestArea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChooseBiggestArea.swift; sourceTree = "<group>"; };
 		8FB44DB122812FCF00EDF4FA /* ReverseRomanNumerals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReverseRomanNumerals.swift; sourceTree = "<group>"; };
 		8FB44DB32283CD4E00EDF4FA /* LongestCommonPrefix.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongestCommonPrefix.swift; sourceTree = "<group>"; };
+		FC0225E723D6A16100D7ED6B /* 1025.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = 1025.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,6 +142,7 @@
 				8F58C0742256048E0053C62C /* SimpleExercise0.swift */,
 				18B45A8E22B7BBD700DFC55B /* UsefulBracket.swift */,
 				18BD66EB233CA2EA00E5059F /* SimpleCollection.swift */,
+				FC0225E723D6A16100D7ED6B /* 1025.swift */,
 			);
 			path = Simple;
 			sourceTree = "<group>";
@@ -265,6 +268,7 @@
 				18A3873F22C07F6900F34F23 /* GenerateParenthesics.swift in Sources */,
 				8F7D7E172292D8EF00BEC1C2 /* FourNumberSum.swift in Sources */,
 				8FB44DB42283CD4F00EDF4FA /* LongestCommonPrefix.swift in Sources */,
+				FC0225E823D6A16100D7ED6B /* 1025.swift in Sources */,
 				8F58C0D42261EBE30053C62C /* IntReverse.swift in Sources */,
 				8F58C0602255FA4D0053C62C /* AppDelegate.swift in Sources */,
 				8FB44DB02281285200EDF4FA /* ChooseBiggestArea.swift in Sources */,

@@ -21,9 +21,9 @@ class AnswerViewController: UIViewController {
 		
     }
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-		let transform = SwitchNode()
+		let transform = OneZeroTwoFive()
 
-        let result1 = transform.swapPairs(CreateListNodeByArray.createListNodeByArray(arr: [1,2,3,4]))
+        let result1 = transform.divisorGame(3)
         print(result1)
 	}
 	open var exerciseText: String? {

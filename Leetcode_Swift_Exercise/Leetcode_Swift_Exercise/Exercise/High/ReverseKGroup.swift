@@ -31,7 +31,5 @@ import Foundation
  */
 
 class ReverseKGroup {
-    func reverseKGroup(_ head: ListNode?, _ k: Int) -> ListNode? {
-        
-    }
+    
 }

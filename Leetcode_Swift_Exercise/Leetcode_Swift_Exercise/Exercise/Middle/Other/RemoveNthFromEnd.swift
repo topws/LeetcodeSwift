@@ -19,24 +19,44 @@ import Foundation
 class RemoveNthFromEnd {
     func removeNthFromEnd(_ head: ListNode?, _ n: Int) -> ListNode? {
         
-        return function3(head, n)
+        if head == nil {
+            return head
+        }
+        
+        // find all count
+        var count = 0
+        var current = head
+        while current != nil {
+            count += 1
+            current = current?.next
+        }
+        // remove all - n
+        if count - n == 0 {
+            return head?.next
+        }
+        current = head
+        var offset = 0
+        while offset != count - n - 1 {
+            offset += 1
+            current = current?.next
+        }
+        current?.next = current?.next?.next
+        return head
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     private func function4(_ head: ListNode?, _ n: Int) -> ListNode?{
-//        ListNode dummy = new ListNode(0);
-//        dummy.next = head;
-//        ListNode first = dummy;
-//        ListNode second = dummy;
-//        // Advances first pointer so that the gap between first and second is n nodes apart
-//        for (int i = 1; i <= n + 1; i++) {
-//            first = first.next;
-//        }
-//        // Move first to the end, maintaining the gap
-//        while (first != null) {
-//            first = first.next;
-//            second = second.next;
-//        }
-//        second.next = second.next.next;
-//        return dummy.next;
+
         let dummy: ListNode? = ListNode.init(0)
         dummy?.next = head
         

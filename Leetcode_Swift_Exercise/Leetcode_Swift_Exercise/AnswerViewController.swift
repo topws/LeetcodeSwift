@@ -16,16 +16,16 @@ class AnswerViewController: UIViewController {
         // Do any additional setup after loading the view.
 		view.addSubview(textV)
 		view.backgroundColor = UIColor.white
-		textV.frame = view.bounds.inset(by: UIEdgeInsets.init(top: 80, left: 20, bottom: 20, right: 20))
-		
+		textV.frame = view.bounds.inset(by: UIEdgeInsets.init(top: 100, left: 20, bottom: 600, right: 20))
+        
 		
     }
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-		let transform = OneZeroTwoFive()
-
-        let result1 = transform.divisorGame(3)
-        print(result1)
+		let trans = Rob()
+        
+        trans.rob([1,1,1,2])
 	}
+    
 	open var exerciseText: String? {
 		didSet {
 			if let exerciseText = exerciseText {
@@ -37,10 +37,10 @@ class AnswerViewController: UIViewController {
 	private lazy var textV: UITextView = {
 	
 		let textV =  UITextView()
-		textV.textColor = UIColor.black
+		textV.textColor = UIColor.white
 		textV.textAlignment = .center
 		textV.isScrollEnabled = true
-		
+        textV.backgroundColor = .black
 		return textV
 	}()
     

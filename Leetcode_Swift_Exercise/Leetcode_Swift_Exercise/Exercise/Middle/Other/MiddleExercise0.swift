@@ -18,6 +18,16 @@ import Foundation
 *     }
 * }
 */
+public class RandomNode {
+    public var val: Int
+    public var next: RandomNode?
+    public var random: RandomNode?
+    public init (_ val: Int) {
+        self.val = val
+        self.next = nil
+        self.random = nil
+    }
+}
 public class ListNode {
 	public var val: Int
 	public var next: ListNode?

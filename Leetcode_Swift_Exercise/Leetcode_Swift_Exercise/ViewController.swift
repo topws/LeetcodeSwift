@@ -94,8 +94,7 @@ class ViewController: UIViewController {
 		tab.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "UITableViewCell")
 		return tab
 	}()
-
-	
+    
 	
 }
 extension ViewController: UITableViewDelegate,UITableViewDataSource {
@@ -142,32 +141,47 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource {
 }
 
 
-public final class CIImageKit<Base> {
-    public let base: Base
-    public init(_ base: Base) {
-        self.base = base
+public final class MyImageKit<T> {
+    public let type: T
+    public init(_ type: T) {
+        self.type = type
     }
 }
 
-public protocol CIImageDownloaderProtocol {
+public protocol MyImageDownloaderProtocol {
     associatedtype type
     var ci: type {get}
 }
 
-public extension CIImageDownloaderProtocol {
-    var ci:CIImageKit<Self> {
+public extension MyImageDownloaderProtocol {
+    var ci:MyImageKit<Self> {
         get {
-            return CIImageKit(self)
+            return MyImageKit(self)
         }
     }
 }
 
-extension UIImageView: CIImageDownloaderProtocol {
+extension UIImageView: MyImageDownloaderProtocol {
     
 }
 
-extension CIImageKit where Base: UIImageView {
+extension MyImageKit where T: UIImageView {
     func setImage(url: URL, placeHolder: UIImage?) {
             // 实现 下载图片并缓存、展示的逻辑
+    }
+    
+    func otherImageView() {
+        
+    }
+}
+
+extension UIButton: MyImageDownloaderProtocol {}
+extension MyImageKit where T: UIButton {
+    func setImage(url: URL, placeHolder: UIImage?) {
+            // 实现 下载图片并缓存、展示的逻辑
+    }
+    
+    func otherButton() {
+        
     }
 }

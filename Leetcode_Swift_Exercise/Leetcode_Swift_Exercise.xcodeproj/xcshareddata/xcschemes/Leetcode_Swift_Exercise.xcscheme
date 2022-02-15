@@ -28,6 +28,16 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "FC5ACCD427993AB100DBFEF3"
+               BuildableName = "Leetcode_Swift_ExerciseTests.xctest"
+               BlueprintName = "Leetcode_Swift_ExerciseTests"
+               ReferencedContainer = "container:Leetcode_Swift_Exercise.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
@@ -50,6 +60,13 @@
             ReferencedContainer = "container:Leetcode_Swift_Exercise.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
+      <EnvironmentVariables>
+         <EnvironmentVariable
+            key = "DYLD_PRINT_STATISTICS"
+            value = "YES"
+            isEnabled = "YES">
+         </EnvironmentVariable>
+      </EnvironmentVariables>
    </LaunchAction>
    <ProfileAction
       buildConfiguration = "Release"

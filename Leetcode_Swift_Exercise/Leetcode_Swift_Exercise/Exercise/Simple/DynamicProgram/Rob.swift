@@ -22,65 +22,32 @@ import Foundation
  */
 
 class Rob {
+    
+    var dict: [Int:Int] = [:]
     func rob(_ nums: [Int]) -> Int {
 
-        var preLastIsRob = false
-        let res = helper(nums, &preLastIsRob)
+        if let res = dict[nums.count] {
+            return res
+        }
+        
+        let res = help(nums)
+        dict[nums.count] = res
         
         return res
     }
     
-    func helper(_ nums: [Int],_ lastIsRob: inout Bool) -> Int {
-        
+    func help(_ nums: [Int]) -> Int {
         if nums.count == 1 {
-            lastIsRob = true
             return nums.first!
         }
         if nums.count == 2 {
-            if nums.last! > nums.first! {
-                lastIsRob = true
-                return nums.last!
-            } else {
-                lastIsRob = false
-                return nums.first!
-            }
-        }
-        if nums.count == 3 {
-            if nums.first! + nums.last! > nums[1] {
-                lastIsRob = true
-                return nums.first! + nums.last!
-            } else {
-                lastIsRob = false
-                return nums[1]
-            }
-        }
-        if nums.count == 4 {
-            //1,4 -- 1,3, -- 2,4
-            let value1 = nums[0] + nums[3]
-            let value2 = nums[0] + nums[2]
-            let value3 = nums[1] + nums[3]
-            
-            if value1 >= value2 && value1 >= value3 {
-                lastIsRob = true
-                return value1
-            }
-            
-            if value2 >= value1 && value2 >= value3 {
-                lastIsRob = false
-                return value2
-            }
-            
-            if value3 >= value1 && value3 >= value2 {
-                lastIsRob = true
-                return value3
-            }
+            return max(nums.first!, nums.last!)
         }
         
-        var preLastIsRob = false
-        var preMax = helper(Array(nums[0...nums.count-2]), &preLastIsRob)
-        if !preLastIsRob {
-            preMax += nums.last!
-        }
-        return preMax
+        let last = rob(Array(nums[0..<nums.count - 2])) + nums.last!
+        let noLast = rob(Array(nums[0..<nums.count-1]))
+        return max(last, noLast)
     }
+    
+    
 }

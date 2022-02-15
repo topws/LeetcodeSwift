@@ -21,9 +21,10 @@ class AnswerViewController: UIViewController {
 		
     }
 	override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-		let trans = Rob()
         
-        trans.rob([1,1,1,2])
+        let c = DayFive()
+        c.firstUniqChar("loveleetcode")
+        
 	}
     
 	open var exerciseText: String? {
